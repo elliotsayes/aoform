@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-console.log('aoform v1.3')
+console.log(`aoform v1.0.4`);
 
 import yaml from 'js-yaml';
 import fs from 'fs';
