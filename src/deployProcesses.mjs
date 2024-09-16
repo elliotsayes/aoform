@@ -69,6 +69,7 @@ async function spawnProcess(ao, processInfo, state, signer) {
 // Function to deploy a process
 async function deploySource(ao, processInfo, state, signer, directory) {
   const name = processInfo.name;
+  const processId = directory[name];
   const filePath = processInfo.file;
   const currentHash = getFileHash(filePath);
   const prerunFilePath = processInfo.prerun || ''; // Get the prerun file path, or an empty string if not provided
