@@ -95,7 +95,7 @@ async function deploySource(ao, processInfo, state, signer, directory) {
   }
 
   let directoryCode = '';
-  if (state[directory] === 'true') {
+  if (processInfo.directory === 'true') {
     directoryCode = `
       package.loaded["aoform.directory"] = {
         ${Object.keys(directory).map((key) => `"${key}" = "${directory[key]}"`).join(',\n')}
