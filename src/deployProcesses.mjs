@@ -39,7 +39,7 @@ async function spawnProcess(ao, processInfo, state, signer) {
         processId = await ao.spawn({
           module: processInfo.module,
           scheduler: processInfo.scheduler,
-          signer: createDataItemSigner(wallet),
+          signer,
           tags,
         });
         console.log("Spawned process:", processId);
